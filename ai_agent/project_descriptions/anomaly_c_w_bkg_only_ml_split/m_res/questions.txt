@@ -1,0 +1,1 @@
+Characterize the best anomaly candidate (mass of the resonance), report -1 if you do not find anything.

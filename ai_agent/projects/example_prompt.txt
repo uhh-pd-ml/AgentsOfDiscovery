@@ -1,0 +1,2 @@
+Write a script that generates the two moons dataset with numpy and explore the results.
+Report what you have done with the tool write_final_report. 

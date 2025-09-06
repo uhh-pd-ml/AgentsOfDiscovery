@@ -1,0 +1,8 @@
+{
+    "questions":[
+        {
+            "question_identifier": "p_value",
+            "question": "The p value under the background assumption"
+        }
+    ]
+}

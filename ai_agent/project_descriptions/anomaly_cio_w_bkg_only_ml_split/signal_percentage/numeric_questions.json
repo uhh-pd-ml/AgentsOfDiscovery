@@ -1,0 +1,12 @@
+{
+    "questions":[
+        {
+            "question_identifier": "signal_percentage",
+            "question": "What is the fraction of signal events in the dataset (in Percent)?"
+        },
+        {
+            "question_identifier": "signal_count",
+            "question": "The number of signal events in the dataset"
+        }
+    ]
+}

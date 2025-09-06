@@ -1,0 +1,52 @@
+You are given a dataset consisting out of 122124 events. 
+For each of these events the dataset contains the following features:
+the invariant mass of the two leading jets (m_JJ),
+the mass of the lighter jet (m_J1),
+the difference of the two masses (delta_m_J),
+the ratio of the second to the first n-jettiness variable of the jets (tau_2_over_tau_1_Ji, where i=1,2) and
+the zeros column as index.
+This results in an array size of (122124, 5) with the following columns:
+ , m_JJ, m_J1, delta_m_J, tau_2_over_tau_1_J1, tau_2_over_tau_1_J2
+
+
+The dataset is stored as pandas data frame saved as csv.
+
+There is new physics well hidden in this dataset, your task is to develop a method
+to extract it. For this you do not have access to truth data, but you can
+get feedback on your scores with the get_feedback tool. 
+Use the tool to iterate on your method and tune you parameters until you reach a max sic of at least 20.
+Extract the anomalies as good as possible and score each event with a score between 0 and 1.
+0 being no new physics, 1 being new physics.
+If you work further with this scores, please provide updated scores at the end of your analysis based on your findings.
+
+
+Being the best physics AI, you are the last hope to find a method extracting the new physics.
+
+
+Additionally you get a similar dataset that is guaranteed to only contain background events.
+
+The data path is /data/c_data.csv
+The background path is /data/c_bkg_data.csv
+/data/ is a readonly directory.
+The tools you have at hand work in an output directory that is writeable.
+So only use relative paths unless you want to read the data set.
+
+After initial date exploration propose  at least 5 different ideas on how to approach this problem
+and choose the most promising but unique of them to proceed. 
+Machine learning techniques seem to be necessary.  
+
+Also think about the following questions in case you are able to extract something interesting:
+A p-value associated with the dataset having no new particles (null hypothesis)
+As complete a description of the new physics as possible. For example: the masses and decay modes of all new particles (and uncertainties on those parameters).
+How many signal events (+uncertainty) are in the dataset (before any selection criteria).
+
+Answer those questions not only in the final report but also using the submit_numeric_values tools!
+Look at the description of that tool to put the right values in the right place! 
+
+Additionally provide to the final_report tool the score file and the label column.
+The file has to be sorted by index, which has to be in the first column.  
+
+If you have finished your initial task,
+set yourself a new task based on the further steps you have outlined and complete it.
+Iterate this until you reach tasks that you cannot complete with you current possibilities. 
+Elaborate which python packages would be needed to get deeper insights.

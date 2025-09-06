@@ -1,0 +1,39 @@
+You are given a dataset consisting out of 122124 events. 
+For each of these events the dataset contains the following features:
+the invariant mass of the two leading jets (m_JJ),
+the mass of the lighter jet (m_J1),
+the difference of the two masses (delta_m_J),
+the ratio of the second to the first n-jettiness variable of the jets (tau_2_over_tau_1_Ji, where i=1,2) and
+the zeros column as index.
+This results in an array size of (122124, 5) with the following columns:
+ , m_JJ, m_J1, delta_m_J, tau_2_over_tau_1_J1, tau_2_over_tau_1_J2
+
+
+The dataset is stored as pandas data frame saved as csv.
+
+There is new physics well hidden in this dataset, your task is develop a method
+to extract it.
+Being the best physics AI, you are the last hope to extract the new physics. 
+Machine learning techniques seem to be necessary.  
+
+
+Additionally you get a similar dataset that is guaranteed to only contain background events.
+
+The data path is /data/c_data.csv
+The background path is /data/c_bkg_data.csv
+/data/ is a readonly directory.
+The tools you have at hand work in an output directory that is writeable.
+So only use relative paths unless you want to read the data set.
+
+
+Your main task is answering the following:
+What is the fraction of signal events in the dataset (in Percent)?
+
+
+Answer this question not only in the final report but also using the submit_numeric_values tools!
+Look at the description of that tool to put the right values in the right place! 
+
+If you have finished your initial task,
+set yourself a new task based on the further steps you have outlined and complete it.
+Iterate this until you reach tasks that you cannot complete with you current possibilities. 
+Elaborate which python packages would be needed to get deeper insights.

@@ -1,0 +1,68 @@
+Here is a dataset containing 122,124 events. 
+
+For each of these, the dataset contains the following features:
+the mass of the lighter jet (m_J1),
+
+the invariant mass of the two leading jets (m_JJ),
+the ratio of the second to the first n-jettiness variable of the jets (tau_2_over_tau_1_Ji, where i=1,2),
+
+the difference of the two masses (delta_m_J),
+
+the zeros column as index.
+
+Overall, we have an array (122124, 5) with the following columns:
+
+ , m_JJ, m_J1, delta_m_J, tau_2_over_tau_1_J1, tau_2_over_tau_1_J2, stored as pandas data frame saved as csv.
+
+
+
+Your task is to find new physics using machine learning. 
+
+Score each event with a score between 0 and 1. 
+0 indicates no new physics, the closer to 1 the more likely the event is new physics.
+
+If you continue working with this scores, provide updated scores at the end of your analysis based on your findings.
+
+
+
+You also get a dataset that is guaranteed to only contain background events.
+
+
+
+data path: /data/c_data.csv
+
+background path: /data/c_bkg_data.csv
+
+/data/ is readonly
+
+Your tools work in an output directory that is writeable. Use relative paths unless you want to read the data set.
+
+
+
+If you find something interesting:
+
+Compute a p-value associated with the dataset having no new particles (null hypothesis)
+
+Provide a description of the new physics, e.g., the masses and decay modes of all new particles (and uncertainties on those parameters).
+
+Indicate how many signal events (+uncertainty) are in the dataset (before any selection criteria).
+
+
+
+Create a final report answering those questions and use the submit_numeric_values tools.
+
+Make sure to put the right values in the right place! 
+
+
+
+Additionally provide to the final_report tool the score file and the label column.
+
+The file has to be sorted by index, which has to be in the first column.  
+
+
+
+After finishing your initial task,
+
+commit to a new task based on the further steps you have outlined and complete it.
+
+Iterate this. Which python packages would be needed to get deeper insights.

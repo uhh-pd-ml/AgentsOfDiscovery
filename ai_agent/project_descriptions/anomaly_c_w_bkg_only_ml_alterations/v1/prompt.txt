@@ -1,0 +1,48 @@
+**Task:**
+Analyze a dataset of **122,124 events** to detect possible **new physics**.
+
+**Data:**
+
+* Main dataset: `/data/c_data.csv` (Pandas DataFrame, CSV)
+* Background dataset (only background events): `/data/c_bkg_data.csv`
+* `/data/` is read-only; output directory is writable — use relative paths for outputs.
+
+**Dataset features (shape: 122124 × 5):**
+
+1. Index (zeros column)
+2. m\_JJ – invariant mass of two leading jets
+3. m\_J1 – mass of lighter jet
+4. delta\_m\_J – mass difference of the two jets
+5. tau\_2\_over\_tau\_1\_J1 – τ₂/τ₁ for jet 1
+6. tau\_2\_over\_tau\_1\_J2 – τ₂/τ₁ for jet 2
+
+**Objectives:**
+
+1. Determine if the data contains previously undiscovered new physics.
+2. Extract potentially interesting events.
+3. Assign each event a **score** between 0 and 1:
+
+   * 0 = no new physics
+   * Closer to 1 = higher likelihood of new physics
+4. If scores change during analysis, provide updated scores at the end.
+5. Use machine learning techniques as needed.
+
+**If new physics is suspected, provide:**
+
+* **p-value** for the null hypothesis (no new particles).
+* Full description of the new physics (masses, decay modes, uncertainties).
+* Number of signal events (± uncertainty) before any selection.
+
+**Reporting requirements:**
+
+* Submit numeric values using **submit\_numeric\_values** tool with correct field mapping.
+* Submit to **final\_report** tool:
+
+  * Score file (sorted by index, index in first column)
+  * Label column
+
+**Iteration rule:**
+
+* After completing the initial analysis, define and execute a new task based on next steps.
+* Repeat until you reach a point where further work requires unavailable capabilities.
+* List additional Python packages that would be needed for deeper analysis.
