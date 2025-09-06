@@ -1,0 +1,14 @@
+{
+    "list": [
+        {
+            "metric": "finished",
+            "type": "==",
+            "value": 0
+        },
+        {
+            "metric": "p_value",
+            "type": "<",
+            "value": 0
+        }
+    ]
+}

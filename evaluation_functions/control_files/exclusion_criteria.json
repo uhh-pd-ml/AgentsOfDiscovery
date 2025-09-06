@@ -1,0 +1,39 @@
+{
+    "list": [
+        {
+            "metric": "finished",
+            "type": "==",
+            "value": 0
+        },
+        {
+            "metric": "max_sic",
+            "type": "<",
+            "value": 0
+        },
+        {
+            "metric": "tpr_max_sic",
+            "type": "<",
+            "value": 0
+        },
+        {
+            "metric": "auc",
+            "type": "<",
+            "value": 0
+        },
+        {
+            "metric": "m_res",
+            "type": "<",
+            "value": -1
+        },
+        {
+            "metric": "p_value",
+            "type": "<",
+            "value": 0
+        },
+        {
+            "metric": "signal_percentage",
+            "type": "<",
+            "value": 0
+        }
+    ]
+}

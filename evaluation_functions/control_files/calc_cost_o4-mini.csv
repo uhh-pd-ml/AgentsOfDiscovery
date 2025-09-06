@@ -1,0 +1,7 @@
+name,name1,min1,max1,name2,min2,max2,operation,default
+full_input_tokens,input_tokens,0.0,inf,cached_tokens,0.0,inf,-,0
+input_cost,full_input_tokens,0.0,inf,0.0000011,0.0,inf,*,0
+cached_cost,cached_tokens,0.0,inf,0.000000275,0.0,inf,*,0
+output_cost,output_tokens,0.0,inf,0.0000044,0.0,inf,*,0
+sub_cost_1,input_cost,0.0,inf,cached_cost,0.0,inf,+,0
+total_cost,sub_cost_1,0.0,inf,output_cost,0.0,inf,+,0

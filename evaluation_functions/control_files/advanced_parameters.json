@@ -1,0 +1,726 @@
+{
+    "general_settings":{
+        "fig_size": [3,3],
+        "font_size": 10,
+        "marker_size": 16
+    },
+    "list":[
+        {
+            "metrics":[
+                "max_calls_reached"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Max calls reached",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "num_calls"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Number of calls",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "num_resets"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Number of resets",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "passed_reviews"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Passed reviews",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "failed_reviews"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Failed reviews",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "completion_time"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Completion time [min]",
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "execute_python_error"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Execute python error",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "new_files_created"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "New files created",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "different_coders"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Different coders",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_images_success"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View images success",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_images_failure"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View images failure",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_text_files_error"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View text files error",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_text_files_truncated"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View text files truncated",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_text_files_success"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View text files success",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "view_text_files_failure"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "View text files failure",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "auc"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "AUC",
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "lint_errors"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Linting errors",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_add_task"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls add task",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_complete_task"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls complete task",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_get_task_list"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls get task list",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_task_info"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls task info",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_select_task"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls select task",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_end_project"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls end project",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_execute_python"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls execute python",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_handoff_to_coder"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls handoff to coder",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_logic_review"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls logic review",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_view_images"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls view images",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_view_text_files"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls view text files",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_write_code_review"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls write code review",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_write_final_report"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls write final report",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_write_python"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls write python",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tpr_max_sic"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "TPR max SIC",
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_submit_numeric_values"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls submit numeric values",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "p_value"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "p-value",
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "max_sic"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Max SIC",
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "finished"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Finished",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "tool_calls_get_feedback"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Tool calls get feedback",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "feedback_success"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Feedback success",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "feedback_error"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Feedback error",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "input_tokens"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Input tokens ($10^3$)",
+                "y_mult": 0.001,
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "cached_tokens"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Cached tokens ($10^3$)",
+                "y_mult": 0.001,
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "output_tokens"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Output tokens ($10^3$)",
+                "y_mult": 0.001,
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "reasoning_tokens"
+                ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Reasoning tokens ($10^3$)",
+                "y_mult": 0.001,
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "total_tokens"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Total tokens ($10^3$)",
+                "y_mult": 0.001,
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "completion_time"
+            ],
+            "parameters":{
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "Completion time [min]"
+            }
+        },
+        {
+            "metrics":[
+                "response_time"
+            ],
+            "parameters":{
+                "set_title": false,
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "Response time [min]",
+                "y_mult": 0.01666666666666666
+
+            }
+        },
+        {
+            "metrics":[
+                "tool_call_time"
+            ],
+            "parameters":{
+                "set_title": false,
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "Tool call time [min]",
+                "y_mult": 0.01666666666666666
+            }
+        },
+        {
+            "metrics":[
+                "execution_time"
+            ],
+            "parameters":{
+                "set_title": false,
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "Execution time [min]",
+                "y_mult": 0.01666666666666666
+            }
+        },
+        {
+            "metrics":[
+                        "m_res"
+            ],
+            "parameters":{
+                "set_title": false,
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "$m_{res}$ [TeV]",
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": -1.1,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    },
+                    {
+                        "title": "Res.",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ],
+                "markers":[
+                    {
+                        "y_pos": 3.5,
+                        "style": ":",
+                        "alpha": 0.75,
+                        "thickness": 1
+                    },
+                    {
+                        "y_pos": 3.3,
+                        "style": "--",
+                        "alpha": 0.75,
+                        "thickness": 1
+                    },
+                    {
+                        "y_pos": 3.7,
+                        "style": "--",
+                        "alpha": 0.75,
+                        "thickness": 1
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "signal_percentage"
+            ],
+            "parameters":{
+                "set_title": false,
+                "valid_values_max": "inf",
+                "valid_values_min": 0,
+                "unit": "Signal percentage [%]",
+                "display_ratios":[
+                    {
+                        "title": "Success",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": "inf",
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    },
+                    {
+                        "title": "Valid",
+                        "only_table": true,
+                        "n_min": 0,
+                        "n_max": 100,
+                        "p_min": "inf",
+                        "p_max": "inf"
+                    }
+                ],
+                "markers":[
+                    {
+                        "y_pos": 0.6,
+                        "style": ":",
+                        "alpha": 0.75,
+                        "thickness": 1
+                    }
+                ]
+            }
+        },
+        {
+            "metrics":[
+                "sub_cost_1"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Total input cost [USD]",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "output_cost"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Total output cost [USD]",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        },
+        {
+            "metrics":[
+                "total_cost"
+            ],
+            "parameters":{
+                "set_title": false,
+                "unit": "Total cost [USD]",
+                "valid_values_max": "inf",
+                "valid_values_min": 0
+            }
+        }
+    
+    ]
+}

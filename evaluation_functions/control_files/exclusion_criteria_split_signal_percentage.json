@@ -1,0 +1,14 @@
+{
+    "list": [
+        {
+            "metric": "finished",
+            "type": "==",
+            "value": 0
+        },
+        {
+            "metric": "signal_percentage",
+            "type": "<",
+            "value": 0
+        }
+    ]
+}

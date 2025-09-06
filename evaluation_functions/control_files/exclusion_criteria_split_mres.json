@@ -1,0 +1,14 @@
+{
+    "list": [
+        {
+            "metric": "finished",
+            "type": "==",
+            "value": 0
+        },
+        {
+            "metric": "m_res",
+            "type": "<",
+            "value": -1
+        }
+    ]
+}
