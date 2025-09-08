@@ -52,6 +52,8 @@ source run_default.sh --prompt_file projects/example_prompt.txt --question_file 
 
 Available models are listed in the [OpenAI documentation](https://platform.openai.com/docs/models).
 
+---
+
 ### Automatic evaluation for scoring tasks 
 The `--evaluation_param_file` allows for automated evaluation of projects where the agent is tasked with score something.
 The file needs to have the following structure:
@@ -69,6 +71,8 @@ The area under the ROC curve (AUC) is reported in the primary metrics file toget
 The JSON file can also contain a field `allow_feedback`, if this is set to `true`, it enables the `get_feedback` tool.
 This tool allows the agent to submit a score files and get feedback on its performance (including AUC, max SIC, tpr max SIC and both plots).
 This allows for iterative behavior.
+
+---
 
 ### Collection of numeric answers from the agent
 
@@ -127,6 +131,80 @@ Key outputs include:
   - `task_#.md`: Agent-generated subtasks
   - `final_report.md`: Summary output (if produced by the agent)
   - `feedback/r_#/*`: SIC plot, background rejection plot and submitted score file (only when feedback is enabled)
+
+---
+
+## Evaluation an Plotting
+
+### Extracting data from runs
+
+Given a least one run, `metric_collector.py` allows to summarize the metrics of all runs in a given directory (`--work_dir`) into two files:
+
+1. **Additive metrics** are numeric metrics that can be summed up easily as a table, the same metrics of different agents during one run are added up. The output is saved in `additive_metrics.csv`, each run is represented by a row.
+
+2. **Combined metrics** are metrics that cannot be easily summed up in a CSV, for example strings and arrays. Those are saved in `combined_metrics.json`. Additionally this file also contains all additive metrics and general information
+
+Metrics gets extracted from all files starting with `metrics_` by default. Strict mode can be activated with `-s`, requiring that the files also have to end with `.json`.
+Which metrics get collected from those files is steered by a CSV that has to be passed with `--metrics_to_collect_file`. It has to have the following columns:
+
+- **metric_name** the identifier of the metric you want to collect
+- **metric_type** `add` for collecting numeric values, `add_b` for collecting booleans as additive metric, and `append` for metrics that should be saved as combined metric
+- **default_value** the value the metrics gets if it was not collected in a run
+- **required**    boolean whether the metric has to be present or not, if set to true, do not provide a default value. If a value is required but not present the run is excluded from collection
+
+Furthermore, `--exclusion_criteria file` allows to set criteria for excluding runs. The file has to be a `.json` file formatted as follows:
+
+```json
+{
+  "list": [
+    {
+      "metric": "The metric this criterion is applicable to",
+      "type": "Either '>', '==' or '<' ",
+      "value": "The value the metric is compared to"
+    }
+  ]
+} 
+```
+
+If some metric meets one of the exclusion criteria, the run is excluded completely from metric collection.
+To keep track how many runs where excluded and how many runs in total where checked those values are stored in the combined metrics file as `total_runs` and `skipped_runs`.
+
+If the `--histogram` flag is set, basic histograms and correlation plots of all metrics are generated.
+
+All generated files are saved to the working directory.
+
+---
+
+### Deriving quantities from collected metrics
+
+After extracting metrics from a run it is possible to calculate quantities based on the additive metrics with `derive_quantities.py`.
+The program reads a with `--metrics_file` specified files and calculates new metrics accordingly to a CSV with the following columns:
+
+- **name** the name of the new metric
+- **name1** and **name2** names of one of the metrics needed for calculation of the new metric. Instead of a name a numerical value can be given that is used for the calculation in all runs. Either has to be a metric that appears in the specified metrics file or already has been calculated previously
+- **operation** the operation that should be carried out with the specified values, has to be one of the following:
+  - **+**, **-**, **\***, **\\**, **root** and **log_base**
+  - **ln**, **exp** only the metric specified with `name1` is taken into account
+- **min1**, **max1**, **min2** and **max2** limits for the operands, can be numeric values or `inf` 
+- **default** if one of the metrics does not fall within the specified limits, this value is used
+
+
+When all new metrics are calculated, they are saved in `--output_dir` as `derived_quantities.csv` 
+
+---
+
+### Comparing batches of different runs
+
+The program `compare_batches.py` allows to compare different batches of runs. At first each batch needs to be summarized with the metric collector. Then outputs of this step than can be used as follows:
+```bash
+python compare_batches.py -bs /path/to/additive/metrics/of/batch/1/.csv \
+                              /add/as/many/as/you/like \
+                          -ls 'plot label for batch 1' \
+                              'plot labels fot the other batches' \
+                          -od path/to/output/directory \
+                          -ap path/to/file/with/advance/parameters 
+```
+
 
 ---
 
