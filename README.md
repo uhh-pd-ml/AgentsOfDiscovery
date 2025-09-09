@@ -8,10 +8,14 @@
 [![arXiv](https://img.shields.io/badge/arXiv-WIP-B31B1B.svg)]()
 [![openAI](https://img.shields.io/badge/OpenAI-blue?logo=openai&logoColor=%23412991&labelColor=%23d0d0d0&color=%23412991)](https://platform.openai.com/docs/quickstart)
 
+*Add more badges/ change existing ones?*s
+
 </div>
 
 This repository provides the agent framework used in the paper  *[Agents of Discovery]()*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
 
+
+*Add the abstract here?*
 ---
 
 **Table of Contents**:
@@ -62,7 +66,10 @@ This repository provides the agent framework used in the paper  *[Agents of Disc
 
 4. Prepare:
    - A **prompt file** describing the task (e.g., `projects/example_prompt.txt`)
-   - Optionally, a **question file** for final report questions (one per line, e.g., `projects/example_questions.txt`)
+   - Optionally:
+     - a **question file** for final report questions (one per line, e.g., `projects/example_questions.txt`)
+     - a **evaluation file** for automatic score evaluation (see [here](#automatic-evaluation-for-scoring-tasks) for details)
+     - a **numeric question file** for numeric questions whose answers directly saved as metrics (see [here](#collection-of-numeric-answers-from-the-agent) for details)
 
 ---
 
