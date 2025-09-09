@@ -31,6 +31,7 @@ This repository provides the agent framework used in the paper  *[Agents of Disc
   - [Extracting data from runs](#extracting-data-from-runs)
   - [Deriving quantities from collected metrics](#deriving-quantities-from-collected-metrics)
   - [Comparing batches for different runs](#comparing-batches-of-different-runs)
+  - [Creating tables from comparisons](#creating-tables-from-comparisons)
 - [Data](#data)
 - [Projects](#project-descriptions)
 - [Notes](#notes)
