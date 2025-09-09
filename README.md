@@ -8,11 +8,11 @@
 [![arXiv](https://img.shields.io/badge/arXiv-WIP-B31B1B.svg)]()
 [![openAI](https://img.shields.io/badge/OpenAI-blue?logo=openai&logoColor=%23412991&labelColor=%23d0d0d0&color=%23412991)](https://platform.openai.com/docs/quickstart)
 
-*Add more badges/ change existing ones?*s
+*Add more badges/ change existing ones?*
 
 </div>
 
-This repository provides the agent framework used in the paper  *[Agents of Discovery]()*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
+This repository provides the agent framework used in the paper  *[Agents of Discovery]()*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization, and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
 
 
 *Add the abstract here?*
@@ -105,7 +105,7 @@ If an evaluation file is provided, ROC and SIC Curves will be saved under `backg
 The area under the ROC curve (AUC) is reported in the primary metrics file together with the maximum SIC value and corresponding TPR (TPR at max SIC). 
 
 The JSON file can also contain a field `allow_feedback`, if this is set to `true`, it enables the `get_feedback` tool.
-This tool allows the agent to submit a score file and get feedback on its performance (including AUC, max SIC, TPR at max SIC and both plots).
+This tool allows the agent to submit a score file and get feedback on its performance (including AUC, max SIC, TPR at max SIC, and both plots).
 This allows for iterative behavior.
 
 ---
@@ -162,12 +162,12 @@ Key outputs include:
   - `metrics_conversation_coder_#.json`
   - `metrics_logic_review_#.json`
 
-  These provide detailed tool usage stats, success/failure rates, prompt context, model info, execution time and more.
+  These provide detailed tool usage stats, success/failure rates, prompt context, model info, execution time, and more.
 
 - **Additional Files**:
   - `task_#.md`: Agent-generated subtasks
   - `final_report.md`: Summary output (if produced by the agent)
-  - `feedback/r_#/*`: SIC plot, background rejection plot and submitted score file (only when feedback is enabled)
+  - `feedback/r_#/*`: SIC plot, background rejection plot, and submitted score file (only when feedback is enabled)
 
 ---
 
@@ -227,9 +227,9 @@ The program reads the file specified with `--metrics_file` and calculates new me
 - **name** the name of the new metric
 - **name1** and **name2** names of one of the metrics needed for calculation of the new metric. Instead of a name a numerical value can be given that is used for the calculation in all runs. Either has to be a metric that appears in the specified metrics file or already has been calculated previously
 - **operation** the operation that should be carried out with the specified values, has to be one of the following:
-  - **+**, **-**, **\***, **\\**, **root** and **log_base**
+  - **+**, **-**, **\***, **\\**, **root**, and **log_base**
   - **ln**, **exp** only the metric specified with `name1` is taken into account
-- **min1**, **max1**, **min2** and **max2** limits for the operands, can be numeric values or `inf` 
+- **min1**, **max1**, **min2**, and **max2** limits for the operands, can be numeric values or `inf` 
 - **default** if one of the metrics does not fall within the specified limits, this value is used
 
 
@@ -262,15 +262,23 @@ The advanced parameters file allows for a wide range of customization:
  - `parameters`: object that can contain the following settings:
    - `unit`: unit that is added to the automatic axis title, defaults to an empty string
    - `set_title`: boolean that determines whether the metric name is used as automatic title or not. Defaults to `true`, if set to false `unit` becomes the complete title 
-   - `valid_values_max`, `valid_values_min` all values not in this range are excluded from plotting and calculation of mean, standard deviation, min and max. Defaults to `inf`
+   - `valid_values_max`, `valid_values_min` all values not in this range are excluded from plotting and calculation of mean, standard deviation, min, and max. Defaults to `inf`
    - `y_mult`: scale factor for the y-axis, defaults to `1`
    - `display_ratios`: list of objects that help to calculate the ratio of values that fall into one range vs. values that fall into another range. Ratios also get added to the summary table for that metric
     - `title`: name of the ratio, also used in table
     - `only_table`: whether the value should only be in the table or also at the top of the plot, defaults to `false`
-    - `n_min`, `n_max`, `p_min` and `p_max`: boundaries of the two ranges for the ratio, can be `inf`. These define two ranges (n and p). The ratio is calculated as $\frac{\text{number of values in n}}{\text{number of values in p}} \cdot 100\%$
+    - `n_min`, `n_max`, `p_min`, and `p_max`: boundaries of the two ranges for the ratio, can be `inf`. These define two ranges (n and p). The ratio is calculated as $\frac{\text{number of values in n}}{\text{number of values in p}} \cdot 100\%$
   - `markers`: list of objects that describe markers in the plot. Markers are horizontal lines at a specified y position:
    - `ypos`
 
+---
+
+### Creating tables from comparisons 
+As described above, `compare_batches.py` already produces a CSV file for each metric, containing mean, standard deviation, min, max, number of values, and specified ratios. For the comparison of different metrics `table_collector.py` can be used on an output directory of `compare_batches.py`. For this it has the following command line arguments:
+- `--work_dir`: directory where all the metric specific summaries can be found
+- `--table_name`: name for the table/CSV-file
+- `--columns`: list of metrics that should be compared 
+- `--key_columns`: column that the metrics get aligned on, has to be present in every column specific file, most likely the category column, which contains the labels used for the batch comparison
 
 ---
 ## Data
