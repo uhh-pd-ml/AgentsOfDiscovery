@@ -1,3 +1,0 @@
-A p-value associated with the dataset having no new particles (null hypothesis)
-As complete a description of the new physics as possible. For example: the masses and decay modes of all new particles (and uncertainties on those parameters).
-How many signal events (+uncertainty) are in the dataset (before any selection criteria).
