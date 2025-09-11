@@ -3,12 +3,12 @@
 # Agents of Discovery
 
 [![python](https://img.shields.io/badge/-Python_3.11-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![arXiv](https://img.shields.io/badge/arXiv-WIP-B31B1B.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-2509.08535-B31B1B.svg)](https://arxiv.org/abs/2509.08535)
 [![openAI](https://img.shields.io/badge/OpenAI-blue?logo=openai&logoColor=%23412991&labelColor=%23d0d0d0&color=%23412991)](https://platform.openai.com/docs/quickstart)
 
 </div>
 
-This repository provides the agent framework used in the paper  *[Agents of Discovery]()*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization, and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
+This repository provides the agent framework used in the paper  *[Agents of Discovery](https://arxiv.org/abs/2509.08535)*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization, and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
 
 ---
 
@@ -291,7 +291,7 @@ They are derived from the data used in the [CATHODE](https://arxiv.org/abs/2109.
 
 ## Project descriptions
 
-The steering files for the different prompts used in *[Agents of Discovery]()* can be found in `ai_agent/project_descriptions/`.
+The steering files for the different prompts used in *[Agents of Discovery](https://arxiv.org/abs/2509.08535)* can be found in `ai_agent/project_descriptions/`.
 
 
 ---
