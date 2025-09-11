@@ -1,5 +1,3 @@
-# WORK IN PROGRESS
-
 <div align="center">
 
 # Agents of Discovery
@@ -8,14 +6,10 @@
 [![arXiv](https://img.shields.io/badge/arXiv-WIP-B31B1B.svg)]()
 [![openAI](https://img.shields.io/badge/OpenAI-blue?logo=openai&logoColor=%23412991&labelColor=%23d0d0d0&color=%23412991)](https://platform.openai.com/docs/quickstart)
 
-*Add more badges/ change existing ones?*
-
 </div>
 
 This repository provides the agent framework used in the paper  *[Agents of Discovery]()*, along with supporting data and project descriptions. It contains code for running agents with tools, post-run data extraction, visualization, and execution scripts. For safely running AI-generated code it uses [this](https://github.com/olgarius/ai_agent) Singularity container.
 
-
-*Add the abstract here?*
 ---
 
 **Table of Contents**:
