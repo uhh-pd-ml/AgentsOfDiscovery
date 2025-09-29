@@ -30,6 +30,7 @@ This repository provides the agent framework used in the paper  *[Agents of Disc
 - [Projects](#project-descriptions)
 - [Notes](#notes)
 - [Related projects](#related-projects)
+- [Citation](#citation)
 
 ---
 
@@ -307,6 +308,22 @@ The steering files for the different prompts used in *[Agents of Discovery](http
 ## Related projects
 
 - [Singularity Container Repo (external)](https://github.com/olgarius/ai_agent) — Provides the secure execution environment used by the run scripts.
- 
+
+## Citation
+
+If you use this code in your research, please cite our paper:
+
+```bibtex
+@misc{diefenbacher2025agentsdiscovery,
+      title={Agents of Discovery}, 
+      author={Sascha Diefenbacher and Anna Hallin and Gregor Kasieczka and Michael Krämer and Anne Lauscher and Tim Lukas},
+      year={2025},
+      eprint={2509.08535},
+      archivePrefix={arXiv},
+      primaryClass={hep-ph},
+      url={https://arxiv.org/abs/2509.08535}, 
+}
+```
+
 
 
